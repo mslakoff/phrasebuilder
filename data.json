@@ -4,46 +4,29 @@
     "EQUIPMENT": {
       "Galley": {
         "Refrigerator": [
-          "Sub-Zero refrigerator",
-          "Samsung refrigerator"
-        ],
-        "Microwave": [
-          "Sharp microwave",
-          "Samsung microwave"
-        ]
-      },
-      "Interior": {
-        "Flooring": [
-          "Teak and holly sole",
-          "Carpeted sole"
-        ],
-        "Lighting": [
-          "Recessed LED lighting",
-          "Indirect valence lighting"
+          { "label": "SubZ", "insert": "Sub-Zero refrigerator", "spaceAfter": false, "lineBreakAfter": true },
+          { "label": "Sam", "insert": "Samsung refrigerator", "spaceAfter": false, "lineBreakAfter": true }
         ]
       }
     },
     "RECOMMENDATIONS": {
       "Galley": {
         "Refrigerator": [
-          "Check refrigerator seals",
-          "Defrost the freezer compartment"
-        ],
-        "Microwave": [
-          "Clean microwave interior",
-          "Test microwave operation"
-        ]
-      },
-      "Interior": {
-        "Flooring": [
-          "Vacuum carpeted areas",
-          "Inspect flooring for damage"
-        ],
-        "Lighting": [
-          "Replace inoperative bulbs",
-          "Test light switches"
+          { "label": "Chk Seal", "insert": "Check refrigerator seals", "spaceAfter": false, "lineBreakAfter": true }
         ]
       }
     }
+  },
+  "quickToolbar": {
+    "EQUIPMENT": [
+      { "label": "0", "insert": "0", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false }
+    ],
+    "RECOMMENDATIONS": [
+      { "label": "1", "insert": "1", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": "s", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false }
+    ]
   }
 }

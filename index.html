@@ -3,24 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phrase Builder JSON Test</title>
+<title>Phrase Builder</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<textarea id="textBox" placeholder="Your phrases will appear here..."></textarea>
-
-<div id="toolbar">
-  <button id="modeEquipment" class="active">EQUIPMENT</button>
-  <button id="modeRecommendations">RECOMMENDATIONS</button>
-  <button id="copyButton">Copy</button>
-  <button id="clearButton">Clear</button>
-  <button id="undoButton">Undo</button>
+<div id="fixedHeader">
+  <div id="modeToggles">
+    <button id="modeEquipment" class="active">EQUIPMENT</button>
+    <button id="modeRecommendations">RECOMMENDATIONS</button>
+  </div>
+  <div id="toolbar">
+    <button id="copyButton">Copy</button>
+    <button id="clearButton">Clear</button>
+    <button id="undoButton">Undo</button>
+  </div>
 </div>
 
-<div id="groups"></div>
-<div id="subgroups"></div>
-<div id="phrases"></div>
+<div id="mainContent">
+  <textarea id="textBox" placeholder="Your phrases will appear here..."></textarea>
+  <div id="groups"></div>
+  <div id="subgroups"></div>
+  <div id="phrases"></div>
+</div>
+
+<div id="fixedFooter">
+  <div id="quickToolbar"></div>
+</div>
 
 <script src="app.js"></script>
 </body>

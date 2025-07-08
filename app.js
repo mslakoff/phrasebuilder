@@ -6,14 +6,16 @@ let lastText = '';
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    jsonData = data.modes;
+    jsonData = data;
     loadGroups();
+    loadQuickToolbar();
   });
 
 const textBox = document.getElementById('textBox');
 const groupsDiv = document.getElementById('groups');
 const subgroupsDiv = document.getElementById('subgroups');
 const phrasesDiv = document.getElementById('phrases');
+const quickToolbarDiv = document.getElementById('quickToolbar');
 
 document.getElementById('modeEquipment').addEventListener('click', () => switchMode('EQUIPMENT'));
 document.getElementById('modeRecommendations').addEventListener('click', () => switchMode('RECOMMENDATIONS'));
@@ -38,12 +40,13 @@ function switchMode(mode) {
   clearChildren(subgroupsDiv);
   clearChildren(phrasesDiv);
   loadGroups();
+  loadQuickToolbar();
 }
 
 function loadGroups() {
   clearChildren(groupsDiv);
-  Object.keys(jsonData[currentMode]).forEach(group => {
-    const btn = createButton(group, () => loadSubGroups(group));
+  Object.keys(jsonData.modes[currentMode]).forEach(group => {
+    const btn = createButton({label: group, insert: group}, () => loadSubGroups(group));
     groupsDiv.appendChild(btn);
   });
 }
@@ -51,31 +54,51 @@ function loadGroups() {
 function loadSubGroups(group) {
   clearChildren(subgroupsDiv);
   clearChildren(phrasesDiv);
-  Object.keys(jsonData[currentMode][group]).forEach(subgroup => {
-    const btn = createButton(subgroup, () => loadPhrases(group, subgroup));
+  Object.keys(jsonData.modes[currentMode][group]).forEach(subgroup => {
+    const btn = createButton({label: subgroup, insert: subgroup}, () => loadPhrases(group, subgroup));
     subgroupsDiv.appendChild(btn);
   });
 }
 
 function loadPhrases(group, subgroup) {
   clearChildren(phrasesDiv);
-  jsonData[currentMode][group][subgroup].forEach(phrase => {
-    const btn = createButton(phrase, () => insertPhrase(phrase));
+  jsonData.modes[currentMode][group][subgroup].forEach(phraseObj => {
+    const btn = createButton(phraseObj, () => insertPhrase(phraseObj));
     phrasesDiv.appendChild(btn);
   });
 }
 
-function insertPhrase(phrase) {
-  lastText = textBox.value;
-  if (textBox.value !== '' && !textBox.value.endsWith('\n')) {
-    textBox.value += '\n';
-  }
-  textBox.value += phrase;
+function loadQuickToolbar() {
+  clearChildren(quickToolbarDiv);
+  jsonData.quickToolbar[currentMode].forEach(item => {
+    const btn = createButton(item, () => insertPhrase(item));
+    quickToolbarDiv.appendChild(btn);
+  });
 }
 
-function createButton(label, onClick) {
+function insertPhrase(obj) {
+  lastText = textBox.value;
+  if (!obj) return;
+
+  if (!obj.spaceAfter && /^[.,;!?]$/.test(obj.insert)) {
+    if (textBox.value.endsWith(" ")) {
+      textBox.value = textBox.value.slice(0, -1);
+    }
+  }
+
+  textBox.value += obj.insert;
+
+  if (obj.spaceAfter) {
+    textBox.value += " ";
+  }
+  if (obj.lineBreakAfter) {
+    textBox.value += "\n";
+  }
+}
+
+function createButton(obj, onClick) {
   const btn = document.createElement('button');
-  btn.textContent = label;
+  btn.textContent = obj.label;
   btn.addEventListener('click', onClick);
   return btn;
 }
