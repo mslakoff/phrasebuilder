@@ -30,9 +30,10 @@
       { "label": "9", "insert": "9", "spaceAfter": true, "lineBreakAfter": false },
       { "label": "the", "insert": "the", "spaceAfter": true, "lineBreakAfter": false },
       { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "s", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "stb", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
       { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false },
       { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": "s", "insert": "s", "spaceAfter": false, "lineBreakAfter": false },
       { "label": "LB", "insert": "", "spaceAfter": false, "lineBreakAfter": true },
       { "label": "SP", "insert": " ", "spaceAfter": false, "lineBreakAfter": false },
       { "label": "#", "insert": "NUMBERPAD", "spaceAfter": false, "lineBreakAfter": false }
@@ -50,9 +51,10 @@
       { "label": "9", "insert": "9", "spaceAfter": true, "lineBreakAfter": false },
       { "label": "the", "insert": "the", "spaceAfter": true, "lineBreakAfter": false },
       { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "s", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "stb", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
       { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false },
       { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": "s", "insert": "s", "spaceAfter": false, "lineBreakAfter": false },
       { "label": "LB", "insert": "", "spaceAfter": false, "lineBreakAfter": true },
       { "label": "SP", "insert": " ", "spaceAfter": false, "lineBreakAfter": false },
       { "label": "#", "insert": "NUMBERPAD", "spaceAfter": false, "lineBreakAfter": false }
