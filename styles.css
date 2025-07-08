@@ -10,12 +10,24 @@ body { font-family: sans-serif; background: #121212; color: #ffffff; margin: 0; 
     padding: 8px 0;
     z-index: 1000;
 }
-#modeToggles, #actionButtons, #quickToolbar {
+#modeToggles, #actionButtons {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     justify-content: center;
     margin: 4px 0;
+}
+#quickToolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 6px 0;
+    background: #121212;
+    position: sticky;
+    bottom: 0;
+    z-index: 900;
 }
 #textBox {
     width: 95%;
