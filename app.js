@@ -17,6 +17,12 @@ const subgroupsDiv = document.getElementById('subgroups');
 const phrasesDiv = document.getElementById('phrases');
 const quickToolbarDiv = document.getElementById('quickToolbar');
 
+// Modal elements
+const modal = document.getElementById('numberPadModal');
+const closeModal = document.getElementById('closeModal');
+const numberPadInput = document.getElementById('numberPadInput');
+const insertNumberPad = document.getElementById('insertNumberPad');
+
 document.getElementById('modeEquipment').addEventListener('click', () => switchMode('EQUIPMENT'));
 document.getElementById('modeRecommendations').addEventListener('click', () => switchMode('RECOMMENDATIONS'));
 document.getElementById('copyButton').addEventListener('click', () => {
@@ -31,6 +37,19 @@ document.getElementById('clearButton').addEventListener('click', () => {
 document.getElementById('undoButton').addEventListener('click', () => {
   textBox.value = lastText;
 });
+
+// Modal handling
+closeModal.onclick = function() { modal.style.display = "none"; numberPadInput.value = ""; }
+insertNumberPad.onclick = function() {
+    lastText = textBox.value;
+    const value = numberPadInput.value.trim();
+    if(value !== "") {
+        textBox.value += value;
+    }
+    modal.style.display = "none";
+    numberPadInput.value = "";
+}
+window.onclick = function(event) { if(event.target == modal){ modal.style.display = "none"; numberPadInput.value = ""; } }
 
 function switchMode(mode) {
   currentMode = mode;
@@ -71,7 +90,13 @@ function loadPhrases(group, subgroup) {
 function loadQuickToolbar() {
   clearChildren(quickToolbarDiv);
   jsonData.quickToolbar[currentMode].forEach(item => {
-    const btn = createButton(item, () => insertPhrase(item));
+    const btn = createButton(item, () => {
+      if(item.insert === "NUMBERPAD"){
+        modal.style.display = "block";
+      } else {
+        insertPhrase(item);
+      }
+    });
     quickToolbarDiv.appendChild(btn);
   });
 }

@@ -46,3 +46,40 @@ button.active { background: #ffcc00; color: #000; }
     justify-content: center;
     margin: 6px 0;
 }
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1500;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+    background-color: #1e1e1e;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+.close:hover { color: #fff; }
+#numberPadInput {
+    width: 80%;
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px 0;
+}
