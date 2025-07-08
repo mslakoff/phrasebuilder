@@ -1,0 +1,49 @@
+
+{
+  "modes": {
+    "EQUIPMENT": {
+      "Galley": {
+        "Refrigerator": [
+          "Sub-Zero refrigerator",
+          "Samsung refrigerator"
+        ],
+        "Microwave": [
+          "Sharp microwave",
+          "Samsung microwave"
+        ]
+      },
+      "Interior": {
+        "Flooring": [
+          "Teak and holly sole",
+          "Carpeted sole"
+        ],
+        "Lighting": [
+          "Recessed LED lighting",
+          "Indirect valence lighting"
+        ]
+      }
+    },
+    "RECOMMENDATIONS": {
+      "Galley": {
+        "Refrigerator": [
+          "Check refrigerator seals",
+          "Defrost the freezer compartment"
+        ],
+        "Microwave": [
+          "Clean microwave interior",
+          "Test microwave operation"
+        ]
+      },
+      "Interior": {
+        "Flooring": [
+          "Vacuum carpeted areas",
+          "Inspect flooring for damage"
+        ],
+        "Lighting": [
+          "Replace inoperative bulbs",
+          "Test light switches"
+        ]
+      }
+    }
+  }
+}
