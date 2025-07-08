@@ -37,7 +37,6 @@ document.getElementById('undoButton').addEventListener('click', () => {
   textBox.value = lastText;
 });
 
-// Keypad logic
 keypad.addEventListener('click', (e) => {
     if (!e.target.classList.contains('key')) return;
     const key = e.target.textContent;
@@ -73,6 +72,7 @@ function switchMode(mode) {
 
 function loadGroups() {
   clearChildren(groupsDiv);
+  if (!jsonData.modes[currentMode]) return;
   Object.keys(jsonData.modes[currentMode]).forEach(group => {
     const btn = createButton({label: group, insert: group, spaceAfter: false, lineBreakAfter: false}, () => loadSubGroups(group));
     groupsDiv.appendChild(btn);
@@ -98,6 +98,7 @@ function loadPhrases(group, subgroup) {
 
 function loadQuickToolbar() {
   clearChildren(quickToolbarDiv);
+  if (!jsonData.quickToolbar[currentMode]) return;
   jsonData.quickToolbar[currentMode].forEach(item => {
     const btn = createButton(item, () => {
       if(item.insert === "NUMBERPAD"){
@@ -114,7 +115,6 @@ function insertPhrase(obj) {
   lastText = textBox.value;
   if (!obj) return;
 
-  // Generalized trimBeforeInsert
   if (obj.trimBeforeInsert) {
     if (textBox.value.endsWith(" ")) {
       textBox.value = textBox.value.slice(0, -1);

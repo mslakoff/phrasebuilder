@@ -3,8 +3,6 @@
   "modes": {},
   "quickToolbar": {
     "EQUIPMENT": [
-      { "label": "0", "insert": "0", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "1", "insert": "1", "spaceAfter": true, "lineBreakAfter": false },
       { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
       { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
       { "label": ";", "insert": ";", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
