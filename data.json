@@ -4,15 +4,14 @@
     "EQUIPMENT": {
       "Galley": {
         "Refrigerator": [
-          { "label": "SubZ", "insert": "Sub-Zero refrigerator", "spaceAfter": false, "lineBreakAfter": true },
-          { "label": "Sam", "insert": "Samsung refrigerator", "spaceAfter": false, "lineBreakAfter": true }
+          { "label": "SubZ", "insert": "Sub-Zero refrigerator", "spaceAfter": false, "lineBreakAfter": true }
         ]
       }
     },
     "RECOMMENDATIONS": {
       "Galley": {
         "Refrigerator": [
-          { "label": "Chk Seal", "insert": "Check refrigerator seals", "spaceAfter": false, "lineBreakAfter": true }
+          { "label": "ChkSeal", "insert": "Check refrigerator seals", "spaceAfter": false, "lineBreakAfter": true }
         ]
       }
     }
@@ -20,13 +19,29 @@
   "quickToolbar": {
     "EQUIPMENT": [
       { "label": "0", "insert": "0", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "1", "insert": "1", "spaceAfter": true, "lineBreakAfter": false },
       { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false }
+      { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "s", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "t", "insert": "the", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "&", "insert": "and", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "LB", "insert": "", "spaceAfter": false, "lineBreakAfter": true },
+      { "label": "SP", "insert": " ", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": "#", "insert": "", "spaceAfter": false, "lineBreakAfter": false }
     ],
     "RECOMMENDATIONS": [
+      { "label": "0", "insert": "0", "spaceAfter": true, "lineBreakAfter": false },
       { "label": "1", "insert": "1", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false },
       { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": "s", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false }
+      { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "s", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "t", "insert": "the", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "&", "insert": "and", "spaceAfter": true, "lineBreakAfter": false },
+      { "label": "LB", "insert": "", "spaceAfter": false, "lineBreakAfter": true },
+      { "label": "SP", "insert": " ", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": "#", "insert": "", "spaceAfter": false, "lineBreakAfter": false }
     ]
   }
 }

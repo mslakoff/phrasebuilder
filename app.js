@@ -46,7 +46,7 @@ function switchMode(mode) {
 function loadGroups() {
   clearChildren(groupsDiv);
   Object.keys(jsonData.modes[currentMode]).forEach(group => {
-    const btn = createButton({label: group, insert: group}, () => loadSubGroups(group));
+    const btn = createButton({label: group, insert: group, spaceAfter: false, lineBreakAfter: false}, () => loadSubGroups(group));
     groupsDiv.appendChild(btn);
   });
 }
@@ -55,7 +55,7 @@ function loadSubGroups(group) {
   clearChildren(subgroupsDiv);
   clearChildren(phrasesDiv);
   Object.keys(jsonData.modes[currentMode][group]).forEach(subgroup => {
-    const btn = createButton({label: subgroup, insert: subgroup}, () => loadPhrases(group, subgroup));
+    const btn = createButton({label: subgroup, insert: subgroup, spaceAfter: false, lineBreakAfter: false}, () => loadPhrases(group, subgroup));
     subgroupsDiv.appendChild(btn);
   });
 }
