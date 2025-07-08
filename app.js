@@ -17,11 +17,10 @@ const subgroupsDiv = document.getElementById('subgroups');
 const phrasesDiv = document.getElementById('phrases');
 const quickToolbarDiv = document.getElementById('quickToolbar');
 
-// Modal elements
+// Keypad modal
 const modal = document.getElementById('numberPadModal');
-const closeModal = document.getElementById('closeModal');
-const numberPadInput = document.getElementById('numberPadInput');
-const insertNumberPad = document.getElementById('insertNumberPad');
+const numberDisplay = document.getElementById('numberDisplay');
+const keypad = document.getElementById('keypad');
 
 document.getElementById('modeEquipment').addEventListener('click', () => switchMode('EQUIPMENT'));
 document.getElementById('modeRecommendations').addEventListener('click', () => switchMode('RECOMMENDATIONS'));
@@ -38,18 +37,28 @@ document.getElementById('undoButton').addEventListener('click', () => {
   textBox.value = lastText;
 });
 
-// Modal handling
-closeModal.onclick = function() { modal.style.display = "none"; numberPadInput.value = ""; }
-insertNumberPad.onclick = function() {
-    lastText = textBox.value;
-    const value = numberPadInput.value.trim();
-    if(value !== "") {
-        textBox.value += value;
+// Keypad logic
+keypad.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('key')) return;
+    const key = e.target.textContent;
+    if (key === 'DEL') {
+        numberDisplay.textContent = numberDisplay.textContent.slice(0, -1) || '0';
+    } else if (key === 'OK') {
+        lastText = textBox.value;
+        const val = numberDisplay.textContent;
+        if (val !== '0') {
+            textBox.value += val;
+        }
+        numberDisplay.textContent = '0';
+        modal.style.display = 'none';
+    } else if (key === 'CANCEL') {
+        numberDisplay.textContent = '0';
+        modal.style.display = 'none';
+    } else {
+        if (numberDisplay.textContent === '0') numberDisplay.textContent = '';
+        numberDisplay.textContent += key;
     }
-    modal.style.display = "none";
-    numberPadInput.value = "";
-}
-window.onclick = function(event) { if(event.target == modal){ modal.style.display = "none"; numberPadInput.value = ""; } }
+});
 
 function switchMode(mode) {
   currentMode = mode;
@@ -105,7 +114,8 @@ function insertPhrase(obj) {
   lastText = textBox.value;
   if (!obj) return;
 
-  if (!obj.spaceAfter && /^[.,;!?]$/.test(obj.insert)) {
+  // Generalized trimBeforeInsert
+  if (obj.trimBeforeInsert) {
     if (textBox.value.endsWith(" ")) {
       textBox.value = textBox.value.slice(0, -1);
     }

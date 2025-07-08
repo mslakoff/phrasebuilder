@@ -1,63 +1,19 @@
 
 {
-  "modes": {
-    "EQUIPMENT": {
-      "Galley": {
-        "Refrigerator": [
-          { "label": "SubZ", "insert": "Sub-Zero refrigerator", "spaceAfter": false, "lineBreakAfter": true }
-        ]
-      }
-    },
-    "RECOMMENDATIONS": {
-      "Galley": {
-        "Refrigerator": [
-          { "label": "ChkSeal", "insert": "Check refrigerator seals", "spaceAfter": false, "lineBreakAfter": true }
-        ]
-      }
-    }
-  },
+  "modes": {},
   "quickToolbar": {
     "EQUIPMENT": [
       { "label": "0", "insert": "0", "spaceAfter": true, "lineBreakAfter": false },
       { "label": "1", "insert": "1", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "2", "insert": "2", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "3", "insert": "3", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "4", "insert": "4", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "5", "insert": "5", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "6", "insert": "6", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "7", "insert": "7", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "8", "insert": "8", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "9", "insert": "9", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "the", "insert": "the", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "stb", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": "s", "insert": "s", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": "LB", "insert": "", "spaceAfter": false, "lineBreakAfter": true },
-      { "label": "SP", "insert": " ", "spaceAfter": false, "lineBreakAfter": false },
+      { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
+      { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
+      { "label": ";", "insert": ";", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
+      { "label": ":", "insert": ":", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
+      { "label": "!", "insert": "!", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
+      { "label": "?", "insert": "?", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
+      { "label": "s", "insert": "s", "spaceAfter": false, "lineBreakAfter": false, "trimBeforeInsert": true },
       { "label": "#", "insert": "NUMBERPAD", "spaceAfter": false, "lineBreakAfter": false }
     ],
-    "RECOMMENDATIONS": [
-      { "label": "0", "insert": "0", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "1", "insert": "1", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "2", "insert": "2", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "3", "insert": "3", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "4", "insert": "4", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "5", "insert": "5", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "6", "insert": "6", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "7", "insert": "7", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "8", "insert": "8", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "9", "insert": "9", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "the", "insert": "the", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "p", "insert": "port", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": "stb", "insert": "starboard", "spaceAfter": true, "lineBreakAfter": false },
-      { "label": ".", "insert": ".", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": ",", "insert": ",", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": "s", "insert": "s", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": "LB", "insert": "", "spaceAfter": false, "lineBreakAfter": true },
-      { "label": "SP", "insert": " ", "spaceAfter": false, "lineBreakAfter": false },
-      { "label": "#", "insert": "NUMBERPAD", "spaceAfter": false, "lineBreakAfter": false }
-    ]
+    "RECOMMENDATIONS": []
   }
 }

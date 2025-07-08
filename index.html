@@ -28,12 +28,17 @@
 <div id="subgroups"></div>
 <div id="phrases"></div>
 
-<!-- Modal for number pad -->
+<!-- Number Pad Modal -->
 <div id="numberPadModal" class="modal">
   <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <input type="text" id="numberPadInput" placeholder="Enter number..." />
-    <button id="insertNumberPad">Insert</button>
+    <div id="numberDisplay">0</div>
+    <div id="keypad">
+      <button class="key">7</button><button class="key">8</button><button class="key">9</button>
+      <button class="key">4</button><button class="key">5</button><button class="key">6</button>
+      <button class="key">1</button><button class="key">2</button><button class="key">3</button>
+      <button class="key">0</button><button class="key">.</button>
+      <button class="key del">DEL</button><button class="key ok">OK</button><button class="key cancel">CANCEL</button>
+    </div>
   </div>
 </div>
 
